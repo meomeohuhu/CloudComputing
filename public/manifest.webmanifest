@@ -1,0 +1,25 @@
+{
+  "name": "VKU Ki\u1ec3m Tra C\u01a1 S\u1edf V\u1eadt Ch\u1ea5t Ngo\u1ea1i Tuy\u1ebfn",
+  "short_name": "VKU Ki\u1ec3m K\u00ea",
+  "description": "\u1ee8ng d\u1ee5ng ki\u1ec3m tra ph\u00f2ng h\u1ecdc v\u00e0 c\u01a1 s\u1edf v\u1eadt ch\u1ea5t VKU, \u01b0u ti\u00ean ho\u1ea1t \u0111\u1ed9ng ngo\u1ea1i tuy\u1ebfn.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#0284c7",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
