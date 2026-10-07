@@ -11,7 +11,7 @@ const lastDigit = Number.parseInt(
 );
 
 STUDENT.lastDigit = lastDigit;
-STUDENT.vat = lastDigit + 5;
+STUDENT.vat = lastDigit + 4;
 STUDENT.databaseName = `DB_${STUDENT.studentId}`;
 
 module.exports = STUDENT;

@@ -7,7 +7,7 @@ const {
 } = require("../utils/book");
 
 test("VAT calculation uses the student VAT", () => {
-  assert.equal(calculatePriceAfterTax(100000, STUDENT.vat), 107000);
+  assert.equal(calculatePriceAfterTax(100000, STUDENT.vat), 106000);
 });
 
 test("validates the required product prefix", () => {
@@ -26,4 +26,3 @@ test("validates book input", () => {
     "Giá gốc phải là một số không âm.",
   );
 });
-

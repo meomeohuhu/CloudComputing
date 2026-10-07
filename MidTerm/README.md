@@ -11,7 +11,7 @@ Prefix:
 `262`
 
 VAT:  
-`(2 + 5)% = 7%`
+`(2 + 4)% = 6%`
 
 ## 1. Giới thiệu
 
@@ -134,8 +134,8 @@ Case đúng prefix:
 - Mã: `262-TEST`
 - Tên: `Giáo trình Điện toán đám mây`
 - Giá: `100000`
-- VAT: `7%`
-- Giá sau thuế: `107000`
+- VAT: `6%`
+- Giá sau thuế: `106000`
 
 Lệnh test logic không cần MongoDB:
 
@@ -167,7 +167,7 @@ Không đưa URI MongoDB hoặc password thật vào source code, README, GitHub
 - [x] Hiển thị Nguyễn Thành Thịnh trên giao diện.
 - [x] Hiển thị MSSV `23IT262`.
 - [x] Prefix được suy ra là `262`.
-- [x] VAT được suy ra là `7%`.
+- [x] VAT được suy ra là `6%` theo công thức `(chữ số cuối MSSV + 4)%`.
 - [x] Có route `GET /verify`.
 - [x] Tên database là `DB_23IT262`.
 - [x] Mã sai prefix bị chặn ở backend.
