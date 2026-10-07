@@ -1,0 +1,23 @@
+{
+  "name": "cloud-book-23it262",
+  "version": "1.0.0",
+  "description": "Web quản lý sách giữa kỳ môn Điện toán đám mây - Nguyễn Thành Thịnh 23IT262",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node --watch app.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "connect-mongo": "^5.1.0",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "express-handlebars": "^8.0.3",
+    "express-session": "^1.18.2",
+    "mongoose": "^8.18.0"
+  }
+}
+

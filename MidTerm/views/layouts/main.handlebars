@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{title}} | Cloud Book</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <a class="brand" href="/">Cloud Book</a>
+        <nav>
+          <a href="/">Trang chủ</a>
+          <a href="/verify">Xác minh bài làm</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container page-content">
+      <section class="student-card" aria-label="Thông tin sinh viên">
+        <div>
+          <p class="eyebrow">Thông tin sinh viên</p>
+          <h2>{{student.name}}</h2>
+          <p>MSSV: <strong>{{student.studentId}}</strong></p>
+        </div>
+        <div class="student-meta">
+          <span>Prefix sản phẩm <strong>{{student.prefix}}</strong></span>
+          <span>VAT áp dụng <strong>{{student.vat}}%</strong></span>
+        </div>
+      </section>
+
+      {{{body}}}
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        {{student.name}} | MSSV: {{student.studentId}} | VAT áp dụng: {{student.vat}}%
+      </div>
+    </footer>
+  </body>
+</html>
+

@@ -1,0 +1,83 @@
+<section class="hero">
+  <div>
+    <p class="eyebrow">Cloud Native Book Management</p>
+    <h1>Quản Lý Sách Trực Tuyến</h1>
+    <p class="lead">Lưu trữ sách trên MongoDB Atlas với tách quyền đọc và ghi.</p>
+  </div>
+  <div class="session-badge">
+    <span class="status-dot"></span>
+    Stateless Cloud Session
+    <strong>Bạn đã truy cập {{session.visitCount}} lần trong phiên này</strong>
+  </div>
+</section>
+
+{{#if error}}
+  <div class="alert alert-error" role="alert">{{error}}</div>
+{{/if}}
+
+<section class="panel form-panel">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">Write connection</p>
+      <h2>Thêm Sách Mới</h2>
+    </div>
+    <span class="tag">VAT tự động {{student.vat}}%</span>
+  </div>
+
+  <form action="/books" method="post" class="book-form">
+    <label>
+      Mã sản phẩm
+      <input name="code" value="{{form.code}}" placeholder="{{student.prefix}}-CLOUD" required />
+      <small>Bắt buộc bắt đầu bằng {{student.prefix}}.</small>
+    </label>
+    <label>
+      Tên sách
+      <input name="name" value="{{form.name}}" placeholder="Giáo trình Điện toán đám mây" required />
+    </label>
+    <label>
+      Giá gốc
+      <input name="price" value="{{form.price}}" type="number" min="0" step="0.01" placeholder="100000" required />
+    </label>
+    <button type="submit">Lưu Sách Vào Cloud Database</button>
+  </form>
+</section>
+
+<section class="panel">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">Read connection</p>
+      <h2>Danh Sách Sách Trong Database</h2>
+    </div>
+    <span class="tag">{{books.length}} sách</span>
+  </div>
+
+  {{#if books.length}}
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Mã SP</th>
+            <th>Tên sách</th>
+            <th>Giá gốc</th>
+            <th>VAT</th>
+            <th>Giá sau thuế</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each books}}
+            <tr>
+              <td><code>{{code}}</code></td>
+              <td>{{name}}</td>
+              <td>{{formatCurrency price}}</td>
+              <td>{{vat}}%</td>
+              <td class="price-emphasis">{{formatCurrency priceAfterTax}}</td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  {{else}}
+    <div class="empty-state">Chưa có sách nào. Hãy thêm cuốn sách đầu tiên của bạn.</div>
+  {{/if}}
+</section>
+

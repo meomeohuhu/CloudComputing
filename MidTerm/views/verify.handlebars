@@ -1,0 +1,36 @@
+<section class="verify-hero">
+  <p class="eyebrow">Verification route · GET /verify</p>
+  <h1>THÔNG TIN XÁC MINH BÀI LÀM</h1>
+  <p>Trang này giúp giảng viên kiểm tra nhanh logic cá nhân hóa theo MSSV.</p>
+  {{#if pageError}}
+    <div class="alert alert-error" role="alert">{{pageError}}</div>
+  {{/if}}
+</section>
+
+<section class="verify-grid">
+  <div class="panel verification-panel">
+    <h2>Thông tin sinh viên</h2>
+    <dl>
+      <dt>Họ tên</dt>
+      <dd>{{student.name}}</dd>
+      <dt>MSSV</dt>
+      <dd>{{student.studentId}}</dd>
+      <dt>3 số cuối MSSV</dt>
+      <dd>{{student.prefix}}</dd>
+      <dt>Chữ số cuối MSSV</dt>
+      <dd>{{student.lastDigit}}</dd>
+    </dl>
+  </div>
+
+  <div class="panel verification-panel accent-panel">
+    <h2>Logic cá nhân hóa</h2>
+    <dl>
+      <dt>Công thức VAT</dt>
+      <dd>({{student.lastDigit}} + 5)% = {{student.vat}}%</dd>
+      <dt>Tên Database</dt>
+      <dd><code>{{student.databaseName}}</code></dd>
+      <dt>Trạng thái</dt>
+      <dd><span class="verified">Thông tin cá nhân hóa: HỢP LỆ</span></dd>
+    </dl>
+  </div>
+</section>
