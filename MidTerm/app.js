@@ -105,7 +105,7 @@ app.use((error, req, res, next) => {
 
 async function startServer() {
   await connectDatabases();
-  app.listen(port, () => {
+  app.listen(port, "0.0.0.0", () => {
     console.log(`Cloud Book đang chạy tại http://localhost:${port}`);
   });
 }
